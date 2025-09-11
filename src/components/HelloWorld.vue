@@ -1,9 +1,15 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
+import axios from 'axios'
 
 defineProps<{ msg: string }>()
 
 const count = ref(0)
+onMounted(async () => {
+  const res = await axios.get('https://jsonplaceholder.typicode.com/todos/1')
+  console.log(res.data)
+})
+
 </script>
 
 <template>
