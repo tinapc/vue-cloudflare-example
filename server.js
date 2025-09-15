@@ -5,7 +5,7 @@ import dotenv from 'dotenv'
 // Load environment variables from .env file
 dotenv.config()
 // Constants
-const isProduction = process.env.NODE_ENV === 'production' || false
+const isProduction = true
 const port = process.env.PORT || 5173
 const base = process.env.BASE || '/'
 
