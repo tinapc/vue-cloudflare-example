@@ -5,7 +5,7 @@ import { createApp } from './main'
  * @param {string} _url
  */
 export async function render(_url: string) {
-  const { app, router } = createApp()
+  const { app, router, head } = createApp()
 
   router.push(_url)
   await router.isReady()
@@ -17,5 +17,5 @@ export async function render(_url: string) {
   const ctx = {}
   const html = await renderToString(app, ctx)
 
-  return { html }
+  return { html, head }
 }
