@@ -4,7 +4,6 @@ import dotenv from 'dotenv'
 
 // Load environment variables from .env file
 dotenv.config()
-console.log(process.env.NODE_ENV)
 // Constants
 const isProduction = process.env.NODE_ENV === 'production' || false
 const port = process.env.PORT || 5173
