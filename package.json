@@ -8,6 +8,7 @@
     "build": "npm run build:client && npm run build:server",
     "build:client": "vite build --outDir dist/client",
     "build:server": "vite build --ssr src/entry-server.ts --outDir dist/server",
+    "deploy": "npm run build && wrangler deploy",
     "preview": "cross-env VITE_NODE_ENV=production node server.mjs"
   },
   "dependencies": {
@@ -22,7 +23,8 @@
     "sirv": "^3.0.2",
     "vite-ssr-vue": "^1.1.5",
     "vue": "^3.5.18",
-    "vue-router": "^4.5.1"
+    "vue-router": "^4.5.1",
+    "wrangler": "^4.37.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",
